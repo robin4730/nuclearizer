@@ -80,6 +80,7 @@ using namespace std;
 #include "MModuleDiagnostics.h"
 #include "MModuleDiagnosticsEnergyPerStrip.h"
 #include "MModuleDEESMEX.h"
+#include "MModuleHitSideFilter.h"
 
 
 
@@ -145,6 +146,7 @@ MAssembly::MAssembly()
   m_Supervisor->AddAvailableModule(new MModuleResponseGenerator());
   m_Supervisor->AddAvailableModule(new MModuleRevan());
   m_Supervisor->AddAvailableModule(new MModuleTACcut());
+  m_Supervisor->AddAvailableModule(new MModuleHitSideFilter());
   // m_Supervisor->AddAvailableModule(new MModuleNearestNeighbor());
 
   m_Supervisor->AddAvailableModule(new MModuleDiagnostics());
